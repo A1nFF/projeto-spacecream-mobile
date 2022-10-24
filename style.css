@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Staatliches', sans-serif;
+    --ff-texting: 'Palanquin', sans-serif;
+
+    --bg-primary: #EFF1FF;
+    --bg-secundary: #8E9AAF;
+    --bg-third: #CBC0D3;
+    --bg-fourth: #FEEAFA;
+
+    --text-head-color: #FFFFFF;
+    --text-body-color:  #23053A;
+    --text-main-color: #4A4E69;
+
+    font-size: 62.5%;
+    --fs-body: 1.6rem;
+    --fs-heading: 4rem;
+}
+
+body {
+    font-family: var(--ff-texting);
+    font-size: var(--fs-body);
+}
+
+.page {
+    max-width: 33rem;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+header {
+    display: relative;
+    font-family: var(--ff-heading);
+    background: var(--bg-secundary);
+    width: 384px;
+    height: 279px;
+
+}
+
+header img {
+    display: absolute;
+    width: 137px;
+    height: 137px;
+    margin-left: 124px;
+    margin-top: 32px;
+
+}
+
+main {
+    background: var(--bg-primary);
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+header h1 {
+    font-size: var(--fs-heading);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-head-color);
+
+    background: var(--bg-third);
+    width: 100%;
+    margin-top: 27px;
+
+}
+
+.card {
+    position: relative;
+
+}
+
+.card h2 {
+    position: absolute;
+    top: 3.30rem;
+    right: 4.60rem;
+    background: var(--bg-fourth);
+    width: 112px;
+    height: 35px;
+
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+    font-family: var(--ff-heading);
+    font-weight: 400;
+
+    animation: topdown 700ms;
+}
+
+.card img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 32px;
+
+    animation: downtop 700ms;
+}
+
+
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
